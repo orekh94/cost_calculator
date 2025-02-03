@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор себестоимости</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор себестоимости блюда</h1>
+        <label>Название блюда: <input type="text" id="dish-name"></label>
+        
+        <div id="ingredients">
+            <div class="ingredient">
+                <input type="text" class="ingredient-name" placeholder="Ингредиент">
+                <input type="number" class="ingredient-price" placeholder="Цена">
+                <input type="number" class="ingredient-volume" placeholder="Объем">
+                <input type="number" class="ingredient-used" placeholder="Используемое кол-во">
+                <select class="ingredient-unit">
+                    <option value="г">г</option>
+                    <option value="мл">мл</option>
+                    <option value="шт">шт</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="add-ingredient">+ Добавить ингредиент</button>
+        <br>
+        <label>Наценка (%): <input type="number" id="markup" value="0"></label>
+        <button id="calculate">Рассчитать</button>
+
+        <h2>Результаты</h2>
+        <p>Общая себестоимость: <span id="total-cost">0</span> руб.</p>
+        <p>Цена с наценкой: <span id="final-price">0</span> руб.</p>
+
+        <button id="save-recipe">Сохранить рецепт</button>
+        <button id="export-excel">Экспорт в Excel</button>
+    </div>
+</body>
+</html>
